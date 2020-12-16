@@ -51,8 +51,11 @@ Add the following lines befor
 #POP(S)
 -A INPUT -p tcp --dport 110 -j ACCEPT
 -A INPUT -p tcp --dport 995 -j ACCEPT
-'''
-
+```
+### Reload the IPTables rules
+```shell
+sudo iptables-restore < /etc/iptables.firewall.rules
+```
 
 
 
