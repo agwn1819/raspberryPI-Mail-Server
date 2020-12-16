@@ -12,17 +12,34 @@ You will be using following Tools:
 
 **RoundCube**, web-based IMAP email client to read and send your Emails.
 
-# H1 Read carefully
+# Read carefully
 
 If you are setting up an Email server using your residential Internet connection you must check this:
 
-## H2 How to know if your Internet Service Providers(ISP) is blocking Email ports?
-### H3 This Tool nmap allo you to test it:
+## How to know if your Internet Service Providers(ISP) is blocking Email ports?
+### This Tool nmap allo you to test it:
 ```shell
 sudo apt-get install nmap
 ```
-### H3 run this command:
+### run this command:
 ```shell
 nmap -p 0-65535 portquiz.net > /tmp/nmaptest
 ```
-### H3 grep for the filtered ports like this:
+### grep for the filtered ports like this:
+```shell
+grep filtered /tmp/nmaptest
+```
+### We need the port 25 to configure our own Email Server:
+Create a **vmail** group and user a Home Directory.
+```shell
+sudo groupadd -g 5000 vmail 
+sudo useradd -g vmail -u 5000 vmail -d /var/email -mt
+```
+### Configure IPTables Firewall
+
+
+
+
+
+
+
