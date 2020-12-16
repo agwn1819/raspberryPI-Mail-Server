@@ -1,2 +1,2 @@
 # raspberry_pi_mail_Server
-# With this little script you can configure an email server
+# With this little script you can configure an email server on Raspi-PI from schratch!
