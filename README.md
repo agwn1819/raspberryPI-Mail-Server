@@ -36,9 +36,23 @@ sudo groupadd -g 5000 vmail
 sudo useradd -g vmail -u 5000 vmail -d /var/email -mt
 ```
 ### Configure IPTables Firewall
+Add the following lines befor this Before this line
 
+```shell
+# -------------- WEB
 
-
+# -------------- MAIL
+#SMTP
+-A INPUT -p tcp --dport 25 -j ACCEPT
+-A INPUT -p tcp --dport 465 -j ACCEPT
+-A INPUT -p tcp --dport 587 -j ACCEPT
+#IMAP(S)
+-A INPUT -p tcp --dport 143 -j ACCEPT
+-A INPUT -p tcp --dport 993 -j ACCEPT
+#POP(S)
+-A INPUT -p tcp --dport 110 -j ACCEPT
+-A INPUT -p tcp --dport 995 -j ACCEPT
+'''
 
 
 
