@@ -39,7 +39,9 @@ sudo useradd -g vmail -u 5000 vmail -d /var/email -mt
 Add the following lines befor
 ```shell
 # -------------- WEB
-
+        .
+        .
+        .
 # -------------- MAIL
 #SMTP
 -A INPUT -p tcp --dport 25 -j ACCEPT
@@ -56,6 +58,8 @@ Add the following lines befor
 ```shell
 sudo iptables-restore < /etc/iptables.firewall.rules
 ```
-
-
+### check that the new rules took 
+```shell
+sudo iptables -L
+```
 
