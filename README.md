@@ -62,4 +62,6 @@ sudo iptables-restore < /etc/iptables.firewall.rules
 ```shell
 sudo iptables -L
 ```
+# Forward the ports on your router
+`Port forwarding will not be covered in this tutorial. Just look up online how to forward ports on your particular model.`
 
